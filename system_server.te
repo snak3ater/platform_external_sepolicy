@@ -399,6 +399,12 @@ allow system_server cgroup:dir { remove_name rmdir };
 # /oem access
 r_dir_file(system_server, oemfs)
 
+# Themes
+allow system_server theme_data_file:dir create_dir_perms;
+allow system_server theme_data_file:file create_file_perms;
+allow system_server resourcecache_data_file:dir create_dir_perms;
+allow system_server resourcecache_data_file:file create_file_perms;
+
 ###
 ### Neverallow rules
 ###
